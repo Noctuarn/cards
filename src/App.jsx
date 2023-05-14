@@ -20,6 +20,18 @@ function App() {
       console.warn(err)
       alert("Ooops, there an error for getting data")
     })
+ }
+
+  const Users = () => {
+    return(
+      <div className="cards">
+        {users.map((el, index) => {
+          return(
+            <Cards key = {index} id = {el.id} name ={el.name} email ={el.email} address = {el.address.street} phone = {el.phone}/>
+          )
+        })}
+      </div>
+    )
   }
 
 
@@ -28,15 +40,8 @@ function App() {
       <div className="container">
         <h1 className='title'>React cards</h1>
         <button onClick={getData} className='btn'>Get data</button>
-        <section className='cards'>
-            {users.map((el, index) => {
-              return(
-                <Cards key = {index} id = {el.id} name ={el.name} email ={el.email} address = {el.address.street} phone = {el.phone}/>
-              )
-            })}
-        </section>
-        <section className='load'>
-          <Loading/>
+        <section className='body'>
+            <Users/>
         </section>
       </div>
     </div>
