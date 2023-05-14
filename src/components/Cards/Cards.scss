@@ -1,0 +1,51 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgb(7, 225, 149);
+    border-radius: 15px;
+    padding: 25px;
+
+
+    &__number{
+        align-self: end;
+        font-size: 1.1rem;
+    }
+
+    &__name{
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: rgb(7, 225, 149);
+    }
+
+    &__email{
+        font-size: 1rem;
+        color: #6e6b6b;
+        margin-bottom: 50px;
+
+        @media (min-width: 768px){
+            &:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__addres{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    &__phone{
+        align-self: end;
+        color: #6e6b6b;
+        cursor: pointer;
+
+        @media (min-width: 768px){
+            &:hover{
+                color:rgb(7, 225, 149);
+                text-decoration: underline;
+            }
+        } 
+    }
+}

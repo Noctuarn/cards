@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:regular,700);
+
+$bgc-color: #0f0f0f;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  color: white;
+  font-family: "Oswald";
+}
+
+body{
+  background-color: $bgc-color;
+  padding-top: 50px;
+}
+
+.App{
+  width: 100%;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  padding: 0 10px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.title{
+  font-size: 2rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 40px;  
+}
+
+.btn{
+  background-color: rgb(7, 225, 149);
+  width: fit-content;
+  padding: 15px 35px;
+  font-size: 1.4rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  @media (min-width: 768px){
+    &:hover{
+      background-color:rgb(5, 186, 123) ;      
+    }
+  }
+}
+
+.cards{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0px 15px;
+  gap: 15px;
+}
