@@ -4,6 +4,15 @@ import Cards from './components/Cards/Cards';
 
 function App() {
 
+  const url = "https://jsonplaceholder.typicode.com/users";
+
+  useEffect(() => {
+    fetch(url)
+    .then((response) => response.json())
+    .then(data => console.log(data));
+  }, [])
+
+
   return (
     <div className="App">
       <div className="container">
